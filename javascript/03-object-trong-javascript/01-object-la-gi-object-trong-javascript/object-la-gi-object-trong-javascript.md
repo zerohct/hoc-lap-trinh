@@ -274,7 +274,7 @@ console.log(myComputer.operatingSystem); // undefined
 
 Trong trường hợp `myComputer.operatingSystem`, JavaScript hiểu là bạn đang muốn truy cập vào thuộc tính `operatingSystem` mà trong object `myComputer` lại không có thuộc tính nào như vậy.
 
-## Khởi tạo thuộc tính runtime cho object
+### Khởi tạo thuộc tính runtime cho object
 
 Không chỉ dừng lại ở việc truy cập thuộc tính runtime, bạn cũng có thể dùng toán tử `[]` để khởi tạo object trong JavaScript như sau:
 
