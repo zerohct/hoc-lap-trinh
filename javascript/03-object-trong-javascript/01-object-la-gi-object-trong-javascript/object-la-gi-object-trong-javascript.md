@@ -340,7 +340,7 @@ console.log(myComputer.graphicCard); // NVIDIA
 
 ## Giới hạn về tên thuộc tính của object trong JS
 
-Như bạn đã biết, bạn không được phép sử dụng **từ khóa và từ dữ trữ** để đặt tên biến trong JavaScript, ví dụ như: "var", "const", "let", "for", "while",...
+Như bạn đã biết, bạn không được phép sử dụng **từ khóa và từ dữ trữ** để đặt tên biến trong JavaScript, ví dụ như: `var`, `const`, `let`, `for`, `while`,...
 
 Nhưng với thuộc tính trong object khác, bạn không bị giới hạn này:
 
