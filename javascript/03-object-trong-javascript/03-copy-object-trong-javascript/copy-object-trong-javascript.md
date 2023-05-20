@@ -133,7 +133,7 @@ let p2 = {};
 Object.assign(p2, p1);
 ```
 
-**Tại sao gọi là copy nông?**
+## Tại sao gọi là copy nông?
 
 Tương tự như **so sánh nông**, **copy nông** chỉ thực hiện sao chép trên một cấp độ. Nếu giá trị của thuộc tính trong object **cũng là một object** thì object copy sẽ không hoàn toàn độc lập với object nguồn.
 
