@@ -46,7 +46,7 @@ Sau đây là một số cách để copy object thành hai đối tượng đ�
 
 ## Copy object sử dụng vòng lặp `for...in`
 
-Các đơn giản nhất để copy object trong JavaScript là sử dụng vòng lặp `for...in` để duyệt tất cả các thuộc tính của object. Rồi lấy giá trị ứng với từng thuộc tính để gán cho object mới.
+Cách đơn giản nhất để copy object trong JavaScript là sử dụng vòng lặp `for...in` để duyệt tất cả các thuộc tính của object. Rồi lấy giá trị ứng với từng thuộc tính để gán cho object mới.
 
 Ví dụ copy object bằng `for...in`:
 
