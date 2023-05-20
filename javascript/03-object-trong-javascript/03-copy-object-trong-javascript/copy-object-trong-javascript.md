@@ -165,10 +165,9 @@ Vì vậy, khi thay đổi ở `point2` thì `point1` cũng thay đổi theo.
 let p1 = { x: 1, y: 2 };
 let p2 = { ...p1 };
 ```
+## Sử dụng Spread
 
 Cú pháp spread `(...)` có nhiều điều để nói và được áp dụng ở nhiều trường hợp nên mình sẽ trình bày ở bài viết sau.
-
-##
 
 Khi object bao gồm nhiều đối tượng lồng nhau, bạn cần copy sâu (deep copy) để có thể tạo ra đối tượng độc lập.
 
