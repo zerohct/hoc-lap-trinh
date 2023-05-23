@@ -22,7 +22,8 @@ position: 7
 
 ## Dependency Injection (DI)
 
-![Dependency Injection](https://1.bp.blogspot.com/-FYPUWhwwCbM/Xf7C4MxUsgI/AAAAAAAAAQo/RCI3w2QmRokvmt9TuK05qxBfbuWW-LKfQCLcBGAsYHQ/s640/Design-Patterns-Explained-%25E2%2580%2593-Dependency-Injection-with-Code-Examples-881x440.png)
+![Dependency Injection](https://github.com/techmely/hoc-lap-trinh/assets/29374426/3bbde695-58c3-472a-a717-201536a42ab3)
+
 
 ### DI là gì
 
