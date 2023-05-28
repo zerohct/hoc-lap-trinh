@@ -1,5 +1,5 @@
 ---
-title: "Biến và khai báo biến"
+title: "Biến và khai báo biến trong Go"
 description: "Go được xây dựng như một ngôn ngữ lập trình hệ thống (ví dụ, hệ điều hành, trình điều khiển thiết bị) và do đó nó hướng tới các lập trình viên quen với C và C++. Theo nhóm phát triển Go, không phải người phát triển hệ thống mà là các nhà phát triển ứng dụng sẽ trở thành những người sử dụng Go chủ yếu. Tại sao? Tôi không thể nói thay cho các nhà phát triển hệ thống, nhưng đối với những người xây dựng trang web, dịch vụ, các ứng dụng máy tính để bàn, các nhu cầu mới xuất hiện cho một lớp của các hệ thống mà đứng ở giữa các ứng dụng hệ thống cấp thấp và ứng dụng cấp cao hơn."
 keywords:
   [
@@ -24,7 +24,7 @@ image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
 
-## Biến và khai báo biến
+## Biến và khai báo biến trong Go
 
 Hãy bắt đầu khai báo một biến số bằng cách _bạn khai báo và gán giá trị cho một biến bằng cách x = 4._ Thật không may, mọi thứ phức tạp hơn trong Go. Chúng ta bắt đầu bằng cách xem xét một ví dụ đơn giản. Sau đó, ở chương sau, chúng ta sẽ giải thích một lần nữa khi xem cách tạo và sử dụng cấu trúc. Tuy nhiên, nó có thể sẽ mất thời gian trước khi bạn thực sự cảm thấy quen với nó.
 

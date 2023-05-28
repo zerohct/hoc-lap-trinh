@@ -24,7 +24,7 @@ image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
 
-# Cơ bản
+## Cơ bản về Go
 
 Go là ngôn ngữ biên dịch, liên kết tĩnh, có cú pháp giống C và kèm theo một trình tự động dọn dẹp bộ nhớ (garbage collection - GC). Điều đó nghĩa là gì?
 
@@ -65,7 +65,7 @@ if (name == "Goku" && power > 9000) || (name == "gohan" && power < 4000) {
 
 Ngoài ra, Go gần với C hơn so với C# hoặc Java - không chỉ về mặt cú pháp, mà về mục đích. Điều đó phản ánh sự trong sáng và đơn giản của ngôn ngữ, hy vọng sẽ dần trở nên rõ ràng hơn khi bạn tìm hiểu nó.
 
-## Garbage Collected (GC)
+## Garbage Collected (GC) trong Go
 
 Một số biến có thể xác định được quá trình tồn tại của nó ngay từ khi khai báo. Ví dụ như một biến cục bộ cho một hàm sẽ bị thu hồi khi thoát ra khỏi hàm. Trong trường hợp khác, nó không phải là quá rõ ràng -- ít nhất là đối với một chương trình biên dịch. Ví dụ, thời gian sống của một biến được trả về bởi một hàm hoặc tham chiếu bởi các biến và các đối tượng khác có thể khó xác định. Nếu không có GC, lập trình viên phải tự giải phóng bộ nhớ các biến không cần thiết. Bằng cách nào? Trong C, bạn sẽ dùng `free(str);` .
 
@@ -89,7 +89,7 @@ Tiếp theo, mở một shell/command prompt và chuyển đến thư mục mà 
 
 Cuối cùng, chạy chương trình bằng cách nhập:
 
-```
+```bash
 go run main.go
 ```
 
@@ -97,13 +97,13 @@ Nếu mọi thứ hoạt động đúng, bạn sẽ nhìn thấy dòng _it's ove
 
 Nhưng khoan đã, bước biên dịch là bước nào? `go run` là một lệnh cho phép biên dịch _và_ chạy. Nó sử dụng thư mục tạm để biên dịch chương trình, thực thi nó và xóa chương trình tạm. Bạn có thể thấy vị trí của thư mục tạm bằng cách chạy lệnh sau:
 
-```
+```bash
 go run --work main.go
 ```
 
 Để biên dịch ra file thực thi, sử dụng `go build`:
 
-```
+```bash
 go build main.go
 ```
 
@@ -143,7 +143,7 @@ func main() {
 
 Bạn có thể chạy nó bằng lệnh:
 
-```
+```bash
 go run main.go 9000
 ```
 
@@ -171,7 +171,7 @@ Một điều khác cần lưu ý là Go có bộ thư viện chuẩn được t
 
 Nếu bạn không có internet, bạn có thể đọc tài liệu tại máy tính của mình thông qua cách sau:
 
-```
+```bash
 godoc -http=:6060
 ```
 
