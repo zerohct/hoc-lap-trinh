@@ -1,18 +1,18 @@
 ---
 title: "Interfaces trong Go"
-description: "Để có thể xây dựng được những thư viện phức tạp, chúng ta cần tìm hiểu về khái niệm gói (packages). Trong Go, mỗi gói được đặt tên theo cấu trúc của thử mục trong workspace."
+description: "Bài viết giới thiệu về interfaces trong Go, là kiểu dữ liệu chỉ chứa chữ kí mô tả cho hàm. Nó giúp tách biệt phần mã implementation của hàm và phần gọi hàm ra các đối tượng riêng biệt. Bài viết trình bày cách khai báo, sử dụng và kết hợp interfaces trong Go. Ngoài ra, nó cũng đề cập đến mục đích và lợi ích của việc sử dụng interfaces."
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Interfaces Go",
+    "kiểu dữ liệu hàm Go",
+    "tách biệt implementation Go",
+    "khai báo interface Go",
+    "sử dụng interface Go",
+    "kết hợp interface Go",
+    "lợi ích sử dụng interface",
+    "đối tượng Go",
+    "lập trình Go",
+    "golang",
   ]
 chapter:
   name: "Cách tổ chức mã nguồn và Interfaces"

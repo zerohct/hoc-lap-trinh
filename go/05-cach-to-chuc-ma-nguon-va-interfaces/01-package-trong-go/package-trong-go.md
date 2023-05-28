@@ -1,18 +1,15 @@
 ---
 title: "Package trong Go"
-description: "Để có thể xây dựng được những thư viện phức tạp, chúng ta cần tìm hiểu về khái niệm gói (packages). Trong Go, mỗi gói được đặt tên theo cấu trúc của thử mục trong workspace."
+description: "Bài viết này giới thiệu về cách xây dựng và quản lý gói trong ngôn ngữ lập trình Go. Các từ khoá chuẩn SEO có thể là: Go packages, workspace, import, cyclical imports, visibility, Go get, dependency management."
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Go packages",
+	  "workspace",
+	  "import",
+	  "cyclical imports",
+	  "visibility",
+	  "Go get",
+	  "dependency management"
   ]
 chapter:
   name: "Cách tổ chức mã nguồn và Interfaces"

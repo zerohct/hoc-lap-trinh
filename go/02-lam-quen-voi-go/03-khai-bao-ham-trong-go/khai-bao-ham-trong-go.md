@@ -1,18 +1,18 @@
 ---
 title: "Khai báo hàm trong Go"
-description: "Go được xây dựng như một ngôn ngữ lập trình hệ thống (ví dụ, hệ điều hành, trình điều khiển thiết bị) và do đó nó hướng tới các lập trình viên quen với C và C++. Theo nhóm phát triển Go, không phải người phát triển hệ thống mà là các nhà phát triển ứng dụng sẽ trở thành những người sử dụng Go chủ yếu. Tại sao? Tôi không thể nói thay cho các nhà phát triển hệ thống, nhưng đối với những người xây dựng trang web, dịch vụ, các ứng dụng máy tính để bàn, các nhu cầu mới xuất hiện cho một lớp của các hệ thống mà đứng ở giữa các ứng dụng hệ thống cấp thấp và ứng dụng cấp cao hơn."
+description: "Một hàm có thể trả về một hoặc nhiều giá trị, và bài viết đưa ra ba ví dụ cụ thể: một hàm không có giá trị trả về, một hàm trả về một giá trị và một hàm trả về hai giá trị. Để sử dụng giá trị trả về của một hàm, ta có thể gán nó cho các biến và kiểm tra tính tồn tại của giá trị trả về"
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Khai báo hàm",
+    "Hàm trong Go",
+    "Hàm không trả về",
+    "Hàm trả về giá trị",
+    "Hàm trả về nhiều giá trị",
+    "Sử dụng hàm trong Go",
+    "Gán giá trị trả về",
+    "Giá trị tồn tại",
+    "Blank identifier",
+    "Cú pháp dạng ngắn",
   ]
 chapter:
   name: "Làm quen với Go"

@@ -1,18 +1,18 @@
 ---
 title: "Khai báo biến trong Go"
-description: "Go không phải là một ngôn ngữ hướng đói tượng (OO) giống như C++, java, Ruby hoặc C#. Go không có các đối tượng cũng như khả năng kế thừa (inheritance). Do đó, Go không có các lý thuyết thường được nhắc đến khi nói về OO như đa hình (polymorphism) hay ghi đè (overloading). Thứ mà Go có là các cấu trúc, có thể kết hợp với các phương thức. Go hỗ trợ một dạng đơn giản nhưng hiệu quả của tổ hợp (composition). Nhìn chung, đó là sự kết hợp của những đoạn mã đơn giản, mà lại không cần đến một số tính năng mà OO cung cấp. (Điều đó cho thấy sự tối ưu của *composition* so với *inheritance* và Go là ngôn ngữ đầu tiên tôi sử dụng có một nền tảng vững chắc về vấn đề này.) Mặc dù Go không giống như OO mà bạn quen dùng, bạn sẽ nhận thấy có rất nhiều điểm giống nhau giữa định nghĩa một cấu trúc (structure) và định nghĩa một lớp (class)."
+description: "Go không phải là ngôn ngữ hướng đối tượng như C++, Java, Ruby hay C#. Thay vào đó, Go sử dụng cấu trúc và tổ hợp (composition) để thực hiện các tính năng tương tự. Bài viết giới thiệu cách khai báo và khởi tạo biến cấu trúc, cách thêm phương thức vào cấu trúc và ưu điểm của việc sử dụng con trỏ trong Go."
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Go",
+    "Ngôn ngữ Go",
+    "Khai báo biến Go",
+    "Cấu trúc trong Go",
+    "Tổ hợp trong Go",
+    "Con trỏ Go",
+    "Hướng đối tượng trong Go",
+    "Phương thức trong Go",
+    "Tính kế thừa trong Go",
+    "Tính đa hình trong Go",
   ]
 chapter:
   name: "Cấu trúc trong Go"

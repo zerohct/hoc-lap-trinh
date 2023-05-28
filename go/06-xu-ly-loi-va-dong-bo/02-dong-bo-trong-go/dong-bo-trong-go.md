@@ -1,27 +1,26 @@
 ---
 title: "Lập trình tính toán đồng thời trong Go"
-description: "Go được mô tả là một ngôn ngữ hỗ trợ lập trình tính toán đồng thời. Nó có một cú pháp đơn giản để hỗ trợ điều này. Go sử dụng hai cơ chế sau để thực hiện tính toán đồng thời: goroutines và channels."
+description: "Bài viết tóm tắt về tính toán đồng thời trong Go bằng cách sử dụng goroutines và channels. Goroutines là các tiến trình trong Go và có thể thực thi đồng thời với các tiến trình khác. Channels được sử dụng để đồng bộ hóa và phối hợp các tiến trình"
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "tính toán đồng thời",
+    "Go",
+    "goroutines",
+    "channels",
+    "đồng bộ hóa",
+    "lập trình đồng thời",
+    "mutex",
+    "RWMutex",
+    "đa luồng M:N",
   ]
 chapter:
-  name: "Lập trình tính toán đồng thời trong Go"
-  slug: "chuong-07-lap-trinh-tinh-toan-dong-thoi-trong-go"
+  name: "Xử lý lỗi và đồng bộ trong Go"
+  slug: "chuong-06-xu-ly-loi-va-dong-bo"
 category:
   name: "Go"
   slug: "go"
 image: https://kungfutech.edu.vn/thumbnail.png
-position: 1
+position: 2
 ---
 
 (Người dịch: trong tiếng Anh Concurrency có nghĩa là thực hiện nhiều việc trong cùng một khoảng thời gian. Có người sẽ dịch Concurrency là song song. Riêng tôi cho rằng, song song có nghĩa là hai hoặc nhiều việc cũng được thực hiện trong cùng một thời điểm. Điều này khác với bản chất của Go và mô hình xử lý đa luồng M:N. Nếu 2 Goroutine nằm trên 2 luồng hệ điều hành, thì có thể coi là chúng hoạt động song song. Nếu chúng cùng nằm trên 1 luồng của hệ điều hành, thì không thể coi là hoạt động song song được. Chúng ta chỉ biết rằng, trong một khoảng thời gian xác định, chắc chắn cả hai Goroutine đều được thực thi. Do đó trong chương này, tôi sẽ dùng từ `đồng thời`. )
@@ -185,13 +184,13 @@ func worker(c chan int) { ... }
 
 Các channel hỗ trợ hai thao tác: nhận (receive) và gửi (send). Chúng ta gửi dữ liệu đến channel bằng cách:
 
-```
+```bash
 CHANNEL <- DATA
 ```
 
 và nhận bằng cách
 
-```
+```bash
 VAR := <-CHANNEL
 ```
 

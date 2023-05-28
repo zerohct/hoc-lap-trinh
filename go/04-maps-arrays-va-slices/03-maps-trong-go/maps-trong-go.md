@@ -1,18 +1,18 @@
 ---
 title: "Maps trong Go"
-description: "Chúng ta đã tìm hiểu những kiểu dữ liệu cơ bản và cấu trúc trong Go. Giờ là lúc để tìm hiểu arrays, slices và maps."
+description: "Bài viết tập trung vào Maps trong Go và cách sử dụng chúng. Maps được xem như hashtables hoặc dictionaries trong các ngôn ngữ khác, cho phép xác định và thao tác giá trị thông qua các khóa. Bài viết giới thiệu cách khai báo, khởi tạo, lấy và xóa giá trị từ một map trong Go."
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Maps Go",
+    "hashtables Go",
+    "dictionaries Go",
+    "khai báo map Go",
+    "thao tác map Go",
+    "xóa giá trị map Go",
+    "duyệt map Go",
+    "truyền con trỏ Go",
+    "truyền giá trị Go",
+    "lưu trữ dữ liệu Go",
   ]
 chapter:
   name: "Maps, Arrays và Slices"

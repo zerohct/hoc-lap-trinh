@@ -1,18 +1,16 @@
 ---
 title: "Slices trong Go"
-description: "Chúng ta đã tìm hiểu những kiểu dữ liệu cơ bản và cấu trúc trong Go. Giờ là lúc để tìm hiểu arrays, slices và maps."
+description: "Bài viết này giới thiệu về slice trong ngôn ngữ Go và cách sử dụng chúng thay vì mảng. Nó cung cấp các ví dụ về khai báo slice, khởi tạo slice với make, cách thêm phần tử vào slice bằng append, khái niệm kích thước và dung lượng của slice, cách sử dụng append để mở rộng slice, và một số ví dụ khác liên quan đến slice."
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Go slice",
+    "slice trong Go",
+    "khai báo slice",
+    "khởi tạo slice",
+    "make và append trong Go",
+    "kích thước và dung lượng slice",
+    "re-slice trong Go",
+    "mảng động trong Go",
   ]
 chapter:
   name: "Maps, Arrays và Slices"

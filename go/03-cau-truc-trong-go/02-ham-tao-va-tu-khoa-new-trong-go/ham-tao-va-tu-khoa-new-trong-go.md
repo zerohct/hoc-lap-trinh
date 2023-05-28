@@ -1,18 +1,18 @@
 ---
 title: "Hàm tạo và từ khoá new trong Go"
-description: "Go không phải là một ngôn ngữ hướng đói tượng (OO) giống như C++, java, Ruby hoặc C#. Go không có các đối tượng cũng như khả năng kế thừa (inheritance). Do đó, Go không có các lý thuyết thường được nhắc đến khi nói về OO như đa hình (polymorphism) hay ghi đè (overloading). Thứ mà Go có là các cấu trúc, có thể kết hợp với các phương thức. Go hỗ trợ một dạng đơn giản nhưng hiệu quả của tổ hợp (composition). Nhìn chung, đó là sự kết hợp của những đoạn mã đơn giản, mà lại không cần đến một số tính năng mà OO cung cấp. (Điều đó cho thấy sự tối ưu của *composition* so với *inheritance* và Go là ngôn ngữ đầu tiên tôi sử dụng có một nền tảng vững chắc về vấn đề này.) Mặc dù Go không giống như OO mà bạn quen dùng, bạn sẽ nhận thấy có rất nhiều điểm giống nhau giữa định nghĩa một cấu trúc (structure) và định nghĩa một lớp (class)."
+description: "Hàm tạo (Constructors) trong Go giới thiệu cách sử dụng hàm tạo trong Go thay vì sử dụng cấu trúc hàm tạo như trong các ngôn ngữ khác. Bài viết đề cập đến việc tạo ra một hàm trả về một biến với cấu trúc đã được định nghĩa trước, tương tự như một factory. Nó cung cấp ví dụ về cách tạo hàm tạo và sử dụng từ khóa new để cấp phát bộ nhớ cho một kiểu dữ liệu"
 keywords:
   [
-    "gioi thieu go",
-    "giới thiệu go",
-    "khoá học go",
-    "giới thiệu Go",
-    "giới thiệu go cơ bản",
-    "go la gi",
-    "tong quan ve go",
-    "gioi thieu ve ngon ngu lap trinh go",
-    "tom tat go",
-    "code go la gi",
+    "Hàm tạo trong Go",
+    "Constructors Go",
+    "Cấu trúc hàm tạo Go",
+    "Factory trong Go",
+    "Từ khóa New trong Go",
+    "Sử dụng từ khóa New Go",
+    "Hàm dựng sẵn New Go",
+    "Cấp phát bộ nhớ trong Go",
+    "Lập trình Go",
+    "Ngôn ngữ lập trình Go",
   ]
 chapter:
   name: "Cấu trúc trong Go"
