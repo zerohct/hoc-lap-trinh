@@ -23,11 +23,12 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
+
 ## Biến và khai báo biến
 
-Hãy bắt đầu khai báo một biến số bằng cách *bạn khai báo và gán giá trị cho một biến bằng cách x = 4.* Thật không may, mọi thứ phức tạp hơn trong Go. Chúng ta bắt đầu bằng cách xem xét một ví dụ đơn giản. Sau đó, ở chương sau, chúng ta sẽ giải thích một lần nữa khi xem cách tạo và sử dụng cấu trúc. Tuy nhiên, nó có thể sẽ mất thời gian trước khi bạn thực sự cảm thấy quen với nó.
+Hãy bắt đầu khai báo một biến số bằng cách _bạn khai báo và gán giá trị cho một biến bằng cách x = 4._ Thật không may, mọi thứ phức tạp hơn trong Go. Chúng ta bắt đầu bằng cách xem xét một ví dụ đơn giản. Sau đó, ở chương sau, chúng ta sẽ giải thích một lần nữa khi xem cách tạo và sử dụng cấu trúc. Tuy nhiên, nó có thể sẽ mất thời gian trước khi bạn thực sự cảm thấy quen với nó.
 
-Bạn có thể đang nghĩ *Ồ! Sao lại phức tạp thế?* Hãy xem một vài ví dụ sau.
+Bạn có thể đang nghĩ _Ồ! Sao lại phức tạp thế?_ Hãy xem một vài ví dụ sau.
 
 Cách tường minh nhất để khai báo và gán một biến trong Go rất dài dòng:
 
@@ -83,9 +84,9 @@ func main() {
 }
 ```
 
-Chương trình biên dịch sẽ thông báo *no new variables on left side of :=*. Điều này có nghĩa là chúng ta khai báo biến lần đầu tiên với toán tử `:=` nhưng lần thứ hai tác động vào biến, chúng ta phải dùng toán tử gán `=`. Điều này rất quan trọng, nó khiến bạn nhớ nhiều hơn khi sử dụng chuyển đổi giữa 2 loại toán tử.
+Chương trình biên dịch sẽ thông báo _no new variables on left side of :=_. Điều này có nghĩa là chúng ta khai báo biến lần đầu tiên với toán tử `:=` nhưng lần thứ hai tác động vào biến, chúng ta phải dùng toán tử gán `=`. Điều này rất quan trọng, nó khiến bạn nhớ nhiều hơn khi sử dụng chuyển đổi giữa 2 loại toán tử.
 
-Nếu bạn đọc một thông báo lỗi, bạn sẽ nhận thấy thông báo sử dụng số nhiều khi viết về các biến: *variables*. Go cho phép bạn gán nhiều giá trị vào nhiều biến khác nhau cùng một lúc (sử dụng `=` hoặc `:=`):
+Nếu bạn đọc một thông báo lỗi, bạn sẽ nhận thấy thông báo sử dụng số nhiều khi viết về các biến: _variables_. Go cho phép bạn gán nhiều giá trị vào nhiều biến khác nhau cùng một lúc (sử dụng `=` hoặc `:=`):
 
 ```go
 func main() {
@@ -120,4 +121,3 @@ func main() {
 Đoạn mã trên sẽ không biên dịch được do biến `name` được khai báo nhưng không được sử dụng. Giống như các khai báo import không được dùng, khai báo biến thừa sẽ không làm chậm lại, nhưng tôi nghĩ rằng điều đó khiến cho mã nguồn sáng sủa và dễ đọc hơn.
 
 Tóm lại, để khai báo và gán một biến, cần nhớ: bạn sẽ sử dụng khai báo `var NAME TYPE` khi khai báo một biến và gán giá trị 0 cho nó, `NAME := VALUE` khi khái báo một biến và gán giá trị, và `NAME = VALUE` khi gán giá trị cho một biến đã khai báo trước đó.
-

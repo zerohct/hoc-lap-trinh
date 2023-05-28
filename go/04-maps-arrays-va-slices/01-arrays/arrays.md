@@ -24,8 +24,7 @@ image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
 
-
-Nếu bạn đã quen với Python, Ruby, Perl, JavaScript hoặc PHP..., bạn sẽ quen với khái niệm lập trình *mảng động (dynamic arrays)*. Đó là các mảng dữ liệu có khả năng tự động thay đổi kích thước nếu có thêm dữ liệu được thêm vào mảng. Trong Go, giống nhiều ngôn ngữ khác, một mảng được xác định kích thước từ đầu. Khai báo một mảng yêu cầu phải chỉ rõ kích thước của mảng, một khi kích thước mảng được xác định, nó sẽ không thể tăng thêm:
+Nếu bạn đã quen với Python, Ruby, Perl, JavaScript hoặc PHP..., bạn sẽ quen với khái niệm lập trình _mảng động (dynamic arrays)_. Đó là các mảng dữ liệu có khả năng tự động thay đổi kích thước nếu có thêm dữ liệu được thêm vào mảng. Trong Go, giống nhiều ngôn ngữ khác, một mảng được xác định kích thước từ đầu. Khai báo một mảng yêu cầu phải chỉ rõ kích thước của mảng, một khi kích thước mảng được xác định, nó sẽ không thể tăng thêm:
 
 ```go
 var scores [10]int
@@ -49,4 +48,3 @@ for index, value := range scores {
 ```
 
 Mảng là cách lưu dữ liệu hiệu quả nhưng không linh hoạt. Chúng ta thường không biết số lượng các phần tử cần phải khai báo trước. Để giải quyết vấn đề này, chúng ta dùng slices.
-

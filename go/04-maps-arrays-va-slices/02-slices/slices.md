@@ -24,7 +24,6 @@ image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
 
-
 Trong Go, bạn sẽ rất hiếm khi dùng mảng một cách trực tiếp. Thay vào đó, bạn sẽ sử dụng slices. Một slice là một cấu trúc nhỏ gọn mô tả một vị trí trong một mảng. Có một vài cách để tạo một slice. Cách đầu tiên là một biến thể của khai báo mảng:
 
 ```go
@@ -43,7 +42,7 @@ Chúng ta dùng `make` thay vì `new` vì `new` chỉ đơn thuần là cấp ph
 scores := make([]int, 0, 10)
 ```
 
-Câu lệnh sẽ tạo một slice có kích thước là 0 nhưng có dung lượng là 10. (Nếu bạn để ý, bạn sẽ thấy rằng `make` và `len` *là* overloaded. Go là một ngôn ngữ có một số điểm đáng thất vọng, khi làm ra một số tính năng nhưng không cho phép lập trình viên dùng nó.)
+Câu lệnh sẽ tạo một slice có kích thước là 0 nhưng có dung lượng là 10. (Nếu bạn để ý, bạn sẽ thấy rằng `make` và `len` _là_ overloaded. Go là một ngôn ngữ có một số điểm đáng thất vọng, khi làm ra một số tính năng nhưng không cho phép lập trình viên dùng nó.)
 
 Để hiểu rõ hơn về kích thước và dung lượng, hãy xem các ví dụ sau:
 
@@ -76,9 +75,10 @@ func main() {
 }
 ```
 
-Một slice có thể thay đổi kích thước tói mức nào? Kích thước tối đa là dung lượng của slice, trong trường hợp này là 10. Ban có thể đang nghĩ rằng *điều này chả giải quyết được vấn đề ban đầu. Vẫn là một mảng có kích thước cố định.* Tuy nhiên, hàm `append` khá đặc biệt. Nếu slice đã đầy, nó sẽ tạo một mảng mới, sao chép toàn bộ các giá trị ở mảng cũ sang (nó giống hệt như khái niệm mảng động của PHP, Python, Ruby, JavaScript, ...). Đó là lý do vì sao lại giới thiệu hàm `append`. Chúng ta có thể gán lại giá trị trả về của `append` to biến `scores`: `append` có thể trả về một mảng mới, nếu mảng cũ đã đầy.
+Một slice có thể thay đổi kích thước tói mức nào? Kích thước tối đa là dung lượng của slice, trong trường hợp này là 10. Ban có thể đang nghĩ rằng _điều này chả giải quyết được vấn đề ban đầu. Vẫn là một mảng có kích thước cố định._ Tuy nhiên, hàm `append` khá đặc biệt. Nếu slice đã đầy, nó sẽ tạo một mảng mới, sao chép toàn bộ các giá trị ở mảng cũ sang (nó giống hệt như khái niệm mảng động của PHP, Python, Ruby, JavaScript, ...). Đó là lý do vì sao lại giới thiệu hàm `append`. Chúng ta có thể gán lại giá trị trả về của `append` to biến `scores`: `append` có thể trả về một mảng mới, nếu mảng cũ đã đầy.
 
 Nếu tôi nói rằng Go tăng kích thước mảng theo thuật toán nhân đôi, bạn có thể đoán được đầu ra của các lệnh sau không?
+
 ```go
 func main() {
   scores := make([]int, 0, 5)
@@ -184,7 +184,7 @@ Trong Go, chúng ta dùng slice:
 strings.Index(haystack[5:], " ")
 ```
 
-Chúng ta có thể thấy ở đoạn mã phía trên `[X:]` là viết tắt của *từ X tới cuối* trong khi `[:X]` là viết tắt cửa *từ đầu tới X*. Không giống các ngôn ngữ khác, Go không hỗ trợ giá trị âm cho chỉ số. Nếu bạn muốn một slice chứa tất cả các phần tử trừ phần tử cuối cùng, chúng ta viết:
+Chúng ta có thể thấy ở đoạn mã phía trên `[X:]` là viết tắt của _từ X tới cuối_ trong khi `[:X]` là viết tắt cửa _từ đầu tới X_. Không giống các ngôn ngữ khác, Go không hỗ trợ giá trị âm cho chỉ số. Nếu bạn muốn một slice chứa tất cả các phần tử trừ phần tử cuối cùng, chúng ta viết:
 
 ```go
 scores := []int{1, 2, 3, 4, 5}
@@ -232,5 +232,3 @@ func main() {
 ```
 
 Hãy thử chạy đoạn mã trên. Thử một vài biến thể của nó. Hãy xem chuyện gì xảy ra nếu bạn đổi hàm `copy` thành `copy(worst[2:4], scores[:5])`, hoặc chuyện gì xảy ra khi cố sao chép nhiều hơn hoặc ít hơn `5` giá trị vào `worst`?
-
-

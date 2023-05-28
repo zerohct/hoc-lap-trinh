@@ -23,7 +23,8 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
-#  Cơ bản
+
+# Cơ bản
 
 Go là ngôn ngữ biên dịch, liên kết tĩnh, có cú pháp giống C và kèm theo một trình tự động dọn dẹp bộ nhớ (garbage collection - GC). Điều đó nghĩa là gì?
 
@@ -92,9 +93,9 @@ Cuối cùng, chạy chương trình bằng cách nhập:
 go run main.go
 ```
 
-Nếu mọi thứ hoạt động đúng, bạn sẽ nhìn thấy dòng *it's over 9000!*.
+Nếu mọi thứ hoạt động đúng, bạn sẽ nhìn thấy dòng _it's over 9000!_.
 
-Nhưng khoan đã, bước biên dịch là bước nào? `go run` là một lệnh cho phép biên dịch *và* chạy. Nó sử dụng thư mục tạm để biên dịch chương trình, thực thi nó và xóa chương trình tạm. Bạn có thể thấy vị trí của thư mục tạm bằng cách chạy lệnh sau:
+Nhưng khoan đã, bước biên dịch là bước nào? `go run` là một lệnh cho phép biên dịch _và_ chạy. Nó sử dụng thư mục tạm để biên dịch chương trình, thực thi nó và xóa chương trình tạm. Bạn có thể thấy vị trí của thư mục tạm bằng cách chạy lệnh sau:
 
 ```
 go run --work main.go
@@ -166,7 +167,7 @@ func main() {
 
 Bạn sẽ có 2 lỗi về `fmt` và `os` được import nhưng không được dùng. Bạn có bực mình không? Chắc chắn. Theo thời gian, bạn sẽ quen với nó (dù nó vẫn gây bực mình). Go quản lý nghiêm việc này do việc thêm các gói không dùng có thể khiến quá trình biên dịch bị chậm; thật sự thì tôi không đồng ý với điều này.
 
-Một điều khác cần lưu ý là Go có bộ thư viện chuẩn được tài liệu hóa khá đầy đủ. Bạn có thể vào <https://golang.org/pkg/fmt/#Println>  để học cách sử dụng `Println`. Bạn cũng có thể click vào tiêu đề để tham khảo mã nguồn, đến đầu trang để tham khảo các cách format của hàm.
+Một điều khác cần lưu ý là Go có bộ thư viện chuẩn được tài liệu hóa khá đầy đủ. Bạn có thể vào <https://golang.org/pkg/fmt/#Println> để học cách sử dụng `Println`. Bạn cũng có thể click vào tiêu đề để tham khảo mã nguồn, đến đầu trang để tham khảo các cách format của hàm.
 
 Nếu bạn không có internet, bạn có thể đọc tài liệu tại máy tính của mình thông qua cách sau:
 

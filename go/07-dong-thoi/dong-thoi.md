@@ -16,13 +16,14 @@ keywords:
   ]
 chapter:
   name: "Lập trình tính toán đồng thời trong Go"
-  slug: "chuong-07-lap-trinh-tinh-toan-dong-thoi-trong-go" 
+  slug: "chuong-07-lap-trinh-tinh-toan-dong-thoi-trong-go"
 category:
   name: "Go"
   slug: "go"
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
+
 (Người dịch: trong tiếng Anh Concurrency có nghĩa là thực hiện nhiều việc trong cùng một khoảng thời gian. Có người sẽ dịch Concurrency là song song. Riêng tôi cho rằng, song song có nghĩa là hai hoặc nhiều việc cũng được thực hiện trong cùng một thời điểm. Điều này khác với bản chất của Go và mô hình xử lý đa luồng M:N. Nếu 2 Goroutine nằm trên 2 luồng hệ điều hành, thì có thể coi là chúng hoạt động song song. Nếu chúng cùng nằm trên 1 luồng của hệ điều hành, thì không thể coi là hoạt động song song được. Chúng ta chỉ biết rằng, trong một khoảng thời gian xác định, chắc chắn cả hai Goroutine đều được thực thi. Do đó trong chương này, tôi sẽ dùng từ `đồng thời`. )
 
 Go được mô tả là một ngôn ngữ hỗ trợ lập trình tính toán đồng thời. Nó có một cú pháp đơn giản để hỗ trợ điều này. Go sử dụng hai cơ chế sau để thực hiện tính toán đồng thời: goroutines và channels.
@@ -61,7 +62,7 @@ go func() {
 
 Goroutine sẽ tiêu tốn tài nguyên một chút. Nhiều hàm goroutine có thể cùng hoạt động trên một luồng của OS. Mô hình này thường được gọi là mô hình đa luồng M:N vì chúng ta có M goroutine chạy trên N luồng của hệ điều hành. Kết quả là một goroutine sẽ sử dụng ít tài nguyên (một vài kB) hơn một luồng của hệ điều hành. Trên các hệ thống phần cứng hiện đại, có thể có hàng triệu goroutine.
 
-Hơn nữa, sự phức tạp của cơ chế ánh xạ và lập lịch sẽ được ẩn đi. Chúng ta chỉ cần nói *các đoạn mã này nên chạy đồng thời* và để cho Go thực hiện chúng.
+Hơn nữa, sự phức tạp của cơ chế ánh xạ và lập lịch sẽ được ẩn đi. Chúng ta chỉ cần nói _các đoạn mã này nên chạy đồng thời_ và để cho Go thực hiện chúng.
 
 Quay trở lại ví dụ trên, bạn sẽ thấy chúng ta có hàm `Sleep` trong một vài mili giây. Bởi vì tiến trình chính kết thúc trước khi goroutine có cơ hội thực thi (hàm main không đợi cho đến khi tất cả các Goroutine kết thúc).
 
@@ -158,9 +159,9 @@ func main() {
 }
 ```
 
-Có nhiều cách để lập trình đồng thời hơn chúng ta vừa xem. Ví dụ, có một mutex khác được gọi là mutex đọc ghi (read-write mutex). Nó cho thấy có 2 chức năng có thể khóa: một để khóa trước khi đọc và một để khóa trước khi ghi. Sự phân biệt này cho phép nhiều tiến trình đọc đồng thời trong khi không cho phép bất cứ một tiến trình nào thực hiện ghi dữ liệu. Trong Go, `sync.RWMutex` là một khóa như vậy. Thêm vào đó, hàm `Lock` và `Unlock` của `sync.Mutex`, cũng ch thấy có hai hàm `RLock` và `RUnlock` ; trong đó `R` có nghĩa là *Read*. Trong khi các mutex đọc ghi được sử dụng phổ biến, chúng à một gánh năng cho lập trình viên, : chúng ta phải quan tâm không chỉ là lúc nào thao tác với dữ liệu mà còn quan tâm tới phương thức truy cập là đọc hay ghi.
+Có nhiều cách để lập trình đồng thời hơn chúng ta vừa xem. Ví dụ, có một mutex khác được gọi là mutex đọc ghi (read-write mutex). Nó cho thấy có 2 chức năng có thể khóa: một để khóa trước khi đọc và một để khóa trước khi ghi. Sự phân biệt này cho phép nhiều tiến trình đọc đồng thời trong khi không cho phép bất cứ một tiến trình nào thực hiện ghi dữ liệu. Trong Go, `sync.RWMutex` là một khóa như vậy. Thêm vào đó, hàm `Lock` và `Unlock` của `sync.Mutex`, cũng ch thấy có hai hàm `RLock` và `RUnlock` ; trong đó `R` có nghĩa là _Read_. Trong khi các mutex đọc ghi được sử dụng phổ biến, chúng à một gánh năng cho lập trình viên, : chúng ta phải quan tâm không chỉ là lúc nào thao tác với dữ liệu mà còn quan tâm tới phương thức truy cập là đọc hay ghi.
 
-Hơn nữa, một phần của lập trình đồng thời không phải là truy cập tuần tự vào phần hẹp nhất của đoạn mã, nó còn là cách phối hợp giữa nhiều tiến trình với nhau. Ví dụ, tạm dựng hoạt động 10 mili giây giây không phải là một giải pháp hợp lý. Chuyện gì sẽ xảy ra nếu một tiến trình cần nhiều hơn 10 mili giây? Nếu nó cần ít hơn 10 mili giây, thì chúng ta đang lãng phí thời gian? Ngoài ra, thay vì đợi cho luông xử lý khác kết thúc, tôi muốn hiển thị *này, Tôi có dữ liệu mới để xử lý đây!* thì phải làm thế nào?
+Hơn nữa, một phần của lập trình đồng thời không phải là truy cập tuần tự vào phần hẹp nhất của đoạn mã, nó còn là cách phối hợp giữa nhiều tiến trình với nhau. Ví dụ, tạm dựng hoạt động 10 mili giây giây không phải là một giải pháp hợp lý. Chuyện gì sẽ xảy ra nếu một tiến trình cần nhiều hơn 10 mili giây? Nếu nó cần ít hơn 10 mili giây, thì chúng ta đang lãng phí thời gian? Ngoài ra, thay vì đợi cho luông xử lý khác kết thúc, tôi muốn hiển thị _này, Tôi có dữ liệu mới để xử lý đây!_ thì phải làm thế nào?
 
 Trên đây là tất cả các thứ có thể làm được mà không cần `channels`. Với trường hợp đơn giản, tôi nghĩ bạn **nên dùng** các thành phần cơ bản như `sync.Mutex` và `sync.RWMutex`, nhưng trong phần kế tiếp, `channels` sẽ làm cho lập trình đồng thời trong sáng hơn và ít lỗi.
 
@@ -269,6 +270,7 @@ func (w *Worker) process(c chan int) {
   }
 }
 ```
+
 Chúng ta không biết worker nào đang lấy dữ liệu. Những gì chúng ta biết, những gì Go đảm bảo, là dữ liệu được chúng ta gửi cho channel sẽ chỉ được nhận bởi một worker duy nhất.
 
 Chú ý rằng thứ được chia sẻ chỉ là channel, chúng ta có thể gửi và nhận dữ liệu đồng thời một cách an toàn. Các channel cung cấp các mã đồng bộ, chúng ta cần và cũng đảm bảo rằng, tại bất kỳ thời điểm nào, chỉ có một goroutine có quyền truy cập vào một phần cụ thể của dữ liệu.
@@ -304,6 +306,7 @@ for {
   time.Sleep(time.Millisecond * 50)
 }
 ```
+
 Bạn có thể thấy nó tăng dần cho đến khi nó đầy, lúc này nếu dữ liệu được gửi đến đầu channel, thì sẽ không tiếp tục được.
 
 ### Select trong Go
@@ -330,6 +333,7 @@ for {
   time.Sleep(time.Millisecond * 50)
 }
 ```
+
 Chúng ta đang đẩy 20 tin nhắn mỗi giây, nhưng worker chỉ có thể xử lý 10 mỗi giây; do đó, một nửa các thông điệp sẽ không được xử lý.
 
 Đây chỉ là bắt đầu của những gì chúng ta có thể làm với `select`. Mục đích chính của `select` là để quản lý nhiều channel. Với nhiều channel, `select` sẽ đưa hệ thống vào trạng thái chờ cho đến khi có một channel khả dụng. Nếu không có channel, `default` được sử dụng. Một channel được lựa chọn ngẫu nhiên trong các channel có thể sử dụng.
@@ -377,10 +381,10 @@ case t := <-time.After(time.Millisecond * 100):
 
 Hãy chú ý đến `select`. Chú ý rằng chúng ta đang gửi tới `c` nhưng nhận từ `time.After`. `Select` hoạt động như nhau bất kể chúng ta đang nhận, đang gửi, hoặc bất kỳ sự kết hợp của các channel:
 
-* Các channel khả dụng đầu tiên được chọn.
-* Nếu nhiều channel khả dụng, Go sẽ chọn ngẫu nhiên một cái.
-* Nếu không có channel khả dụng, trường hợp mặc định được thực thi.
-* Nếu không có mặc định, thì hệ thống sẽ vào trạng thái chờ.
+- Các channel khả dụng đầu tiên được chọn.
+- Nếu nhiều channel khả dụng, Go sẽ chọn ngẫu nhiên một cái.
+- Nếu không có channel khả dụng, trường hợp mặc định được thực thi.
+- Nếu không có mặc định, thì hệ thống sẽ vào trạng thái chờ.
 
 Cuối cùng, `select` rất hay dùng bên trong một vòng lặp `for`. Xem đoạn mã sau:
 
@@ -406,7 +410,7 @@ Phải nói rằng, tôi vẫn sử dụng cách đồng bộ khá đơn giản 
 
 # Kết luận
 
-Có người mô tả Go là một ngôn ngữ *tẻ nhạt*. Tẻ nhạt vì nó dễ học, dễ viết và quan trọng là dễ đọc. Chúng ta *đã dành* ra 3 chương để nói về các kiểu dữ liệu, và cách khai báo các kiểu đó.
+Có người mô tả Go là một ngôn ngữ _tẻ nhạt_. Tẻ nhạt vì nó dễ học, dễ viết và quan trọng là dễ đọc. Chúng ta _đã dành_ ra 3 chương để nói về các kiểu dữ liệu, và cách khai báo các kiểu đó.
 
 Nếu bạn có kiến thức về ngôn ngữ có kiểu dữ liệu tĩnh, hầu hết những gì chúng ta đã xem đều đầy đủ. Go cũng có con trỏ và slice trong Go chứng minh rằng không phải chỉ có Java hay C# mới làm được tính năng này.
 
@@ -414,4 +418,4 @@ Nếu bạn chủ yếu sử dụng ngôn ngữ động, bạn sẽ cảm thấy
 
 Ngoài ra, Go tạo ra một cách đơn giản nhưng hiệu quả để tổ chức mã nguồn. Interface, xử lý lỗi thông qua giá trị trả về, `defer` cho quản lý tài nguyên và một cách đơn giản tạo một cấu trúc tổ hợp.
 
-Cuối cùng, Go hỗ trợ sẵn cơ chế lập trình đồng thời. Khó có thể dùng một từ nào để mô tả về goroutine, ngoại trừ hiệu quả và đơn giản (đơn giản vì sử dụng thế nào cũng được). Đó là khái niệm trừu tượng. Các channel thì phức tạp hơn. Tôi luôn nghĩ rằng điều quan trọng là phải hiểu mô hình cơ bản trước khi sử dụng các lớp bao quanh ở mức cao. Tôi *nghĩ* học lập trình đồng thời không dùng channel sẽ rất tốt. Tuy nhiên, các channel đã được xây dựng sẵn, với tôi, không thấy giống như một khái niệm trừu tượng đơn giản. Tôi nói điều này bởi vì chúng thay đổi cách bạn viết và suy nghĩ về lập trình đồng thời. Nó giải quyết các vấn đề khó trong lập trình đồng thời, và chắc chắn là thứ tuyệt vời.
+Cuối cùng, Go hỗ trợ sẵn cơ chế lập trình đồng thời. Khó có thể dùng một từ nào để mô tả về goroutine, ngoại trừ hiệu quả và đơn giản (đơn giản vì sử dụng thế nào cũng được). Đó là khái niệm trừu tượng. Các channel thì phức tạp hơn. Tôi luôn nghĩ rằng điều quan trọng là phải hiểu mô hình cơ bản trước khi sử dụng các lớp bao quanh ở mức cao. Tôi _nghĩ_ học lập trình đồng thời không dùng channel sẽ rất tốt. Tuy nhiên, các channel đã được xây dựng sẵn, với tôi, không thấy giống như một khái niệm trừu tượng đơn giản. Tôi nói điều này bởi vì chúng thay đổi cách bạn viết và suy nghĩ về lập trình đồng thời. Nó giải quyết các vấn đề khó trong lập trình đồng thời, và chắc chắn là thứ tuyệt vời.

@@ -23,6 +23,7 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 3
 ---
+
 ## Khai báo hàm
 
 Một hàm có thể trả về một hoặc nhiều giá trị. Hãy xem ba hàm sau: một hàm không có giá trị trả về, một hàm trả về một giá trị, một hàm trả về hai giá trị.
@@ -75,4 +76,3 @@ Chúng ta đã xem một số ví dụ rời rạc trong chương này. Chúng t
 Nếu bạn quen với một ngôn ngữ động, sự phức tạp của các kiểu dữ liệu và khai báo có thể có vẻ khiến cho chương trình sử dụng ngôn ngữ kém hiệu quả hơn. Tôi không đồng ý với bạn. Đối với một số hệ thống, ngôn ngữ động là khá hiệu quả.
 
 Nếu bạn quen với một ngôn ngữ kiểu tĩnh, có lẽ bạn đang cảm thấy thoải mái với Go. Nội suy ra kiểu dữ liệu và hàm có nhiều giá trị trả về khá hay (mặc dù không phải chỉ Go mới có). Hy vọng rằng khi chúng ta tìm hiểu thêm, bạn sẽ thấy cú pháp trong sáng và ngắn gọn của nó.
-

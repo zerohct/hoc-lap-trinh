@@ -23,6 +23,7 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
+
 Interfaces là kiểu dữ liệu chỉ chứa các chữ kí mô tả cho hàm. Đây là ví dụ:
 
 ```go
@@ -90,5 +91,3 @@ Tóm lại, bạn tạo cấu trúc mã nguồn của bạn thế nào trong wor
 Cách mà Go phân quyền truy cập các kiểu dữ liệu khá đơn giản và hiệu quả. Nó cũng khá thích hợp. Có một vài thứ chúng ta chưa xem qua ở đây, ví dụ như các hằng số, biến toàn cục nhưng cách xác định quyền truy cập của chúng hoàn toàn tương tự.
 
 Cuối cùng, nếu bạn mới biết tới interface, bạn cần thời gian để quen với nó.
-
-

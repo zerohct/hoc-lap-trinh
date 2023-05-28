@@ -23,9 +23,10 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
+
 Để có thể xây dựng được những thư viện phức tạp, chúng ta cần tìm hiểu về khái niệm gói (packages). Trong Go, mỗi gói được đặt tên theo cấu trúc của thử mục trong workspace. Nếu chúng ta xây dựng một hệ thống bán hàng, chúng ta thường bắt đầu bằng một gói có tên là "shopping" và đặt các file mã nguồn trong thư mục `$GOPATH/src/shopping/`.
 
-Chúng ta không muốn đặt tất cả mọi thứ bên trong thư mục này. Ví dụ, có thể chúng ta muốn đặt một vài thành phần thuộc về cơ sở dữ liệu vào một thư mục khác. Để đạt điều đó, chúng ta tạo một thử mục con `$GOPATH/src/shopping/db`. Tên của gói của các file trong thư mục con này, đơn giản là `db`, nhưng để truy cập  nó từ một gói khác, kể cả là gói `shopping` chúng ta cần sử dụng lệnh import `shopping/db`.
+Chúng ta không muốn đặt tất cả mọi thứ bên trong thư mục này. Ví dụ, có thể chúng ta muốn đặt một vài thành phần thuộc về cơ sở dữ liệu vào một thư mục khác. Để đạt điều đó, chúng ta tạo một thử mục con `$GOPATH/src/shopping/db`. Tên của gói của các file trong thư mục con này, đơn giản là `db`, nhưng để truy cập nó từ một gói khác, kể cả là gói `shopping` chúng ta cần sử dụng lệnh import `shopping/db`.
 
 Nói cách khác, khi bạn đặt tên một gói, thông qua từ khóa `package`, bạn cung cấp một giá trị đơn, không phải là một đường dẫn đầy đủ (ví dụ, "shopping" hoặc "db"). Khi bạn sử dụng một gói, bạn cần chỉ đường dẫn đẩy đủ đến gói đó.
 
@@ -134,7 +135,7 @@ func LoadItem(id int) *shopping.Item {
 }
 ```
 
-Bây giờ khi bạn thử chạy mã, bạn sẽ nhận được thông báo lỗi *import cycle not allowed*. Chúng ta giải quyết vấn đề này bằng cách tạo ra một gói mới chứa các cấu trúc được chia sẻ giữa các gói với nhau. Cấu trúc thư mục sẽ là:
+Bây giờ khi bạn thử chạy mã, bạn sẽ nhận được thông báo lỗi _import cycle not allowed_. Chúng ta giải quyết vấn đề này bằng cách tạo ra một gói mới chứa các cấu trúc được chia sẻ giữa các gói với nhau. Cấu trúc thư mục sẽ là:
 
 ```bash
 $GOPATH/src
@@ -217,5 +218,3 @@ Nếu bạn gọi `go get -u` nó sẽ cập nhật các gói (hoặc bạn cũn
 Cuối cùng, bạn có thể thấy `go get` vẫn chưa hoàn chỉnh. Ví dụ, không có cách nào để chỉ định một phiên bản (revision), nó luôn trỏ về `master/head/trunk/default`. Điều này sẽ là vấn đề lớn nếu bạn có hai dự án cần hai phiên bản khác nhau của cùng một thư viện.
 
 Để giải quyết vấn đề này, bạn có thể sử dụng công cụ quản lý phiên bản thư viện. Chúng còn khá mới [goop](https://github.com/nitrous-io/goop) và [godep](https://github.com/tools/godep). Danh sách các công cụ tương tự ở đây [go-wiki](https://code.google.com/p/go-wiki/wiki/PackageManagementTools).
-
-

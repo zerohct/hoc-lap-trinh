@@ -23,6 +23,7 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 1
 ---
+
 ## Xử lý lỗi
 
 Cách xử lý lỗi trong Go là sử dụng giá trị trả về của hàm, mà không phải phát sinh ngoại lệ (exceptions). Xem hàm `strconv.Atoi`, nó nhận đối số đầu vào là một xâu và cố gắng chuyển nó thành một số nguyên:
@@ -104,7 +105,6 @@ Lưu ý: Go có hàm `panic` và `recover`. `panic` tương đương với phát
 
 ## Defer trong Go
 
-
 Mặc dù Go có một bộ gom rác tự động (GC), một số tài nguyên cần được giải phóng một cách tường minh. Ví dụ, chúng ta cần phải `Close()` tập tin sau khi hoàn thành công việc. Lệnh này phải sử dụng rất thận trọng. Với ví dụ này, chúng ta đang viết một hàm, và rất dễ quên `Close` đối tượng mà chúng ta đã khai báo ở 10 dòng trước đó. Trong trường hợp khác, một hàm có thể có nhiều điểm kết thúc. Giải pháp của Go là từ khóa `defer`:
 
 ```go
@@ -166,7 +166,7 @@ if err := process(); err != nil {
 
 Trong hầu hết các ngôn ngữ hướng đối tượng, một lớp cơ bản được dựng sẵn, thường tên là `object`, nó là lớp cha của tất cả các lớp khác. Go, không có khái niệm kế thừa, tất nhiên là nó cũng chẳng có lớp cha nào cả. Go cho phép tồn tại một interface rỗng (empty interface), không chứa một phương thức nào: `interface{}`. Tất cả các loại dữ liệu khác đều có thể coi là một thể hiện (implementation) của empty interface, một cách không tường minh.
 
- Nếu muốn, chúng ta có thể viết một hàm `add` có chữ kí như sau:
+Nếu muốn, chúng ta có thể viết một hàm `add` có chữ kí như sau:
 
 ```go
 func add(a interface{}, b interface{}) interface{} {
@@ -256,4 +256,3 @@ func process(adder Add) int {
 Chúng ta đã nhìn vào nhiều khía cạnh khác nhau của một chương trình Go. Đáng chú ý nhất là chúng ta hiểu cách xử lý lỗi và làm thế nào để giải phóng tài nguyên, ví dụ như các kết nối hoặc các file đang mở. Nhiều người không thích cách tiếp cận của Go trong khi xử lý lỗi. Nó giống như một bước lùi. Trong một số trường hợp, tôi đồng ý với ý kiến đó. Tuy nhiên, tôi cũng thấy rằng cách làm của Go khiến cho mã nguồn rất dễ theo dõi. `defer` là một cách tiếp cận khác nhưng hiệu quả khi quản lý tài nguyên. Sự thật là nó không phải chỉ để dùng khi quản lý tài nguyên. Bạn có thể dùng `defer` cho bất cứ mục đích nào khác, ví dụ như ghi log khi kết thúc hàm.
 
 Chắc chắn là chúng ta không xem hết tất cả các tính năng đặc biệt của Go trong chương này. Nhưng bạn có thể thấy đủ với những ghì bạn đã được học.
-

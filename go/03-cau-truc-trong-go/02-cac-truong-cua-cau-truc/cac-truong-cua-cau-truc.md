@@ -23,6 +23,7 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
+
 Trong ví dụ chúng ta thấy ở trên, `Saiyan` có hai trường `Name` và `Power` có kiểu tương ứng là `string` và `int`. Các trường có thể có bất cứ kiểu nào, kể cả là một cấu trúc khác và các kiểu chúng ta chưa thử như mảng (array), maps, interfaces và hàm.
 
 Ví dụ, chúng ta có thể khai báo của cấu trúc `Saiyan`:
@@ -51,7 +52,7 @@ gohan := &Saiyan{
 
 ## Composition trong Go
 
-Go hỗ trợ tổ hợp hóa (composition), cho phép một cấu trúc có thể chứa một cấu trúc khác. Trong một số ngôn ngữ, nó được gọi là thuộc tính, hoặc kiểu hỗn hợp. Các ngôn ngữ không có composition tường minh có thể mô tả nó theo nhiều kiểu khác nhau. Trong Java, người ta thường xử dụng *kế thừa* (inheritance) để mở rộng một cấu trúc có sẵn:
+Go hỗ trợ tổ hợp hóa (composition), cho phép một cấu trúc có thể chứa một cấu trúc khác. Trong một số ngôn ngữ, nó được gọi là thuộc tính, hoặc kiểu hỗn hợp. Các ngôn ngữ không có composition tường minh có thể mô tả nó theo nhiều kiểu khác nhau. Trong Java, người ta thường xử dụng _kế thừa_ (inheritance) để mở rộng một cấu trúc có sẵn:
 
 ```java
 public class Person {
@@ -98,7 +99,7 @@ goku := &Saiyan{
 goku.Introduce()
 ```
 
-Cấu trúc `Saiyan` có một trường có kiểu dữ liệu `*Person`. Vì chúng ta không khai báo tường minh tên của trường, chúng ta có thể truy cập không tường minh các trường và phương thức của các kiểu dữ liệu được tích hợp bên trong. Tuy nhiên, trình biên dịch Go *đặt* một tên trường cho nó khi biên dịch, điều này được xem là hoàn toàn hợp lệ:
+Cấu trúc `Saiyan` có một trường có kiểu dữ liệu `*Person`. Vì chúng ta không khai báo tường minh tên của trường, chúng ta có thể truy cập không tường minh các trường và phương thức của các kiểu dữ liệu được tích hợp bên trong. Tuy nhiên, trình biên dịch Go _đặt_ một tên trường cho nó khi biên dịch, điều này được xem là hoàn toàn hợp lệ:
 
 ```go
 goku := &Saiyan{
@@ -128,13 +129,13 @@ Cấu trúc mới có thể truy cập hàm cũ như sau `s.Person.Introduce()`.
 
 ## Con trỏ và giá trị
 
-Khi viết mã Go, bạn có thể sẽ tự hỏi *khi nào nên dùng giá trị, khi nào thì dùng con trỏ?* Trước hết, câu trả lời là giống nhau, trừ một trong các tình huống sau:
+Khi viết mã Go, bạn có thể sẽ tự hỏi _khi nào nên dùng giá trị, khi nào thì dùng con trỏ?_ Trước hết, câu trả lời là giống nhau, trừ một trong các tình huống sau:
 
-* Gán một biến cục bộ
-* Thay đổi trường của một cấu trúc
-* Giá trị trả về của một hàm
-* Tham số của một hàm
-* receiver của một phương thức
+- Gán một biến cục bộ
+- Thay đổi trường của một cấu trúc
+- Giá trị trả về của một hàm
+- Tham số của một hàm
+- receiver của một phương thức
 
 Sau đó, nếu bạn vẫn không chắc chắn, hãy dùng con trỏ.
 
@@ -156,5 +157,3 @@ Một lần nữa, đây là tất cả các tình huống khá tinh tế. Bạn
 ## Trước khi đọc tiếp
 
 Tóm lại, chương này giới thiệu các cấu trúc, làm thế nào để tạo một receiver cho một hàm, và chúng ta biết thêm được kiểu dữ liệu con trỏ trong Go. Các chương sau sẽ xây dựng trên những gì chúng ta biết về cấu trúc cũng như các hoạt động bên trong mà chúng ta đã tìm hiểu.
-
-

@@ -23,6 +23,7 @@ category:
 image: https://kungfutech.edu.vn/thumbnail.png
 position: 3
 ---
+
 Maps trong Go và các ngôn ngữ khác được gọi là hashtables hoặc dictionaries. Nó hoạt động như bạn đang nghĩ: bạn định nghĩa một cặp khóa (key) và giá trị (value), và bạn có thể lấy (get), thay đổi (set) và xóa (delete) giá trị thông qua khóa.
 
 Maps, cũng như slices, được tạo ra thông qua hàm `make`. Hãy xem ví dụ sau:
@@ -114,6 +115,3 @@ Khi bạn thấy sự khác nhau là khi bạn sửa giá trị của một slic
 Arrays và maps trong Go hoạt động giống như các ngôn ngữ khác. Nếu bạn quen với các mảng dữ liệu động, thì sẽ có một chút thay đổi nhỏ, nhưng `append` sẽ giải quyết các vấn đề khó chịu này. Nếu chúng ta xem xét tới slice, ta sẽ thấy đó là sự mở rộng của mảng.
 
 Có một số khía cạnh mà chúng ta đã không đề cập đến nó, nhưng bạn cũng gần như không động đến chúng bao giờ. Và nếu bạn tiếp cận chúng, hy vọng rằng chúng ta sẽ mô tả nó ở đây để cho bạn biết điều gì đang xảy ra.
-
-
-
