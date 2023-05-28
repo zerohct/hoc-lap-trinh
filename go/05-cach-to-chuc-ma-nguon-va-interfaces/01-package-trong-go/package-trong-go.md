@@ -1,5 +1,5 @@
 ---
-title: "Gói"
+title: "Package trong Go"
 description: "Để có thể xây dựng được những thư viện phức tạp, chúng ta cần tìm hiểu về khái niệm gói (packages). Trong Go, mỗi gói được đặt tên theo cấu trúc của thử mục trong workspace."
 keywords:
   [
@@ -87,11 +87,11 @@ func main() {
 
 Bây giờ bạn có thể chạy mã bằng cách chuyển tới thư mục của dự án `shopping` và gõ:
 
-```
+```bash
 go run main/main.go
 ```
 
-### Imports lồng nhau
+## Imports lồng nhau
 
 Khi bạn bắt đầu xây dựng một hệ thống phức tạp hơn, bạn có thể gặp tình trạng import lồng nhau (cyclical imports). Điều này xảy ra nếu gói A import gói B nhưng gói B lại import chính gói A (một cách trực tiếp hoặc gián tiếp thông qua các gói khác). Trình biên dịch không cho phép điều này xảy ra.
 
@@ -187,13 +187,13 @@ hàm đó có thể được gọi từ bên ngoài bằng lời gọi hàm `mod
 
 Bạn nãy thử thay đổi tên của các hàm, các trường trong mã nguồn của `shopping`. Ví dụ, nếu bạn đổi tên trường của `Item`: `Price` thành `price`, bạn sẽ gặp lỗi biên dịch.
 
-### Quản lý các gói
+## Quản lý các gói
 
 Lệnh `go` chúng ta hay dùng là `run` và `build`, có một lệnh khác là `get` được dùng để lấy các thư viện của bên ngoài (third-party libraries). `go get` hỗ trợ nhiều giao thức khác nhau nhưng trong ví dụ này, chúng ta sẽ thử lấy các thư viện trong Github, có nghĩa là, bạn nên cài đặt `git` trong hệ thống.
 
 Giả sử như bạn đã có git được cài trong hệ thống, từ shell/command prompt, nhập:
 
-```
+```bash
 go get github.com/mattn/go-sqlite3
 ```
 
@@ -209,7 +209,7 @@ import (
 
 Tôi biết là nó trông giống hnw một URL, nhưng nó sẽ import gói `go-sqlite3` nếu nó được tìm thấy trong thư mục `$GOPATH/src/github.com/mattn/go-sqlite3`.
 
-### Quản lý các thành phần phụ thuộc
+## Quản lý các thành phần phụ thuộc
 
 `go get` có một vài lệnh đặc biệt khác. Nếu chúng ta dùng `go get` bên trong một dự án, nó sẽ quét tất cả các file, tìm kiếm các thư viện khác đang được import và tải chúng. Theo cách này, mã nguồn của chúng tớ trông giống như một `Gemfile` hoặc `package.json`.
 

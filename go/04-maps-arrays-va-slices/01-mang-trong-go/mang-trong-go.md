@@ -1,5 +1,5 @@
 ---
-title: "Arrays"
+title: "Mảng trong Go"
 description: "Chúng ta đã tìm hiểu những kiểu dữ liệu cơ bản và cấu trúc trong Go. Giờ là lúc để tìm hiểu arrays, slices và maps."
 keywords:
   [

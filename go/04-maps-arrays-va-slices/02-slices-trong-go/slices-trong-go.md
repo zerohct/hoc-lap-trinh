@@ -1,5 +1,5 @@
 ---
-title: "Slices"
+title: "Slices trong Go"
 description: "Chúng ta đã tìm hiểu những kiểu dữ liệu cơ bản và cấu trúc trong Go. Giờ là lúc để tìm hiểu arrays, slices và maps."
 keywords:
   [
@@ -24,7 +24,7 @@ image: https://kungfutech.edu.vn/thumbnail.png
 position: 2
 ---
 
-Trong Go, bạn sẽ rất hiếm khi dùng mảng một cách trực tiếp. Thay vào đó, bạn sẽ sử dụng slices. Một slice là một cấu trúc nhỏ gọn mô tả một vị trí trong một mảng. Có một vài cách để tạo một slice. Cách đầu tiên là một biến thể của khai báo mảng:
+Trong Go, bạn sẽ rất hiếm khi dùng mảng một cách trực tiếp. Thay vào đó, bạn sẽ sử dụng `slices`. Một `slice` là một cấu trúc nhỏ gọn mô tả một vị trí trong một mảng. Có một vài cách để tạo một `slice`. Cách đầu tiên là một biến thể của khai báo mảng:
 
 ```go
 scores := []int{1,4,293,4,9}

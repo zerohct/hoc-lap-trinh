@@ -1,5 +1,5 @@
 ---
-title: "Giao diện"
+title: "Interfaces trong Go"
 description: "Để có thể xây dựng được những thư viện phức tạp, chúng ta cần tìm hiểu về khái niệm gói (packages). Trong Go, mỗi gói được đặt tên theo cấu trúc của thử mục trong workspace."
 keywords:
   [
@@ -84,10 +84,12 @@ Interface cũng có thể được dùng trong composition. Các interface cũng
 
 Cuối cùng, interface được sử dụng để tránh tình trạng import lồng nhau. Vì interface không có implementation, chúng sẽ gần như không cần gói thư viện bên ngoài.
 
-## Trước khi đọc tiếp
+<content-warning>
 
 Tóm lại, bạn tạo cấu trúc mã nguồn của bạn thế nào trong workspace cũng được, miễn là bạn cảm thấy thoải mái sau khi viết một vài project cỡ vừa. Điều quan trọng nhất cần nhớ là mối quan hệ chặt chẽ giữa tên của gói và cấu trúc thư mục của bạn (không chỉ trong một dự án, mà là trong toàn bộ workspace).
 
 Cách mà Go phân quyền truy cập các kiểu dữ liệu khá đơn giản và hiệu quả. Nó cũng khá thích hợp. Có một vài thứ chúng ta chưa xem qua ở đây, ví dụ như các hằng số, biến toàn cục nhưng cách xác định quyền truy cập của chúng hoàn toàn tương tự.
 
 Cuối cùng, nếu bạn mới biết tới interface, bạn cần thời gian để quen với nó.
+
+</content-warning>
