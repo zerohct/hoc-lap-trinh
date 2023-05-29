@@ -22,7 +22,7 @@ image: https://user-images.githubusercontent.com/29374426/128105937-9674217e-029
 position: 7
 ---
 
-Trong bài học này chúng ta sẽ viết một chương trình in ra màn hình dòng chữ **Hello World** - bài học nhập môn của hầu hết các ngôn ngữ lập trình trong ngôn ngữ Java.
+Trong bài học này chúng ta sẽ viết một chương trình in ra màn hình dòng chữ **Hello World** - bài học nhập môn của hầu hết các ngôn ngữ lập trình .
 
 ![chuong-trinh-java-dau-tien](https://user-images.githubusercontent.com/29374426/128105937-9674217e-0299-420e-8d65-6546375985eb.png)
 
@@ -46,7 +46,8 @@ public class Main {
     </div>
 </div>
 
-Ví dụ huyền thoại mỗi khi chúng ta học một ngôn ngữ mới đây. Trong một ứng dụng Java thì hàm `main` sẽ luôn chạy đầu tiên. Chúng ta có các `keyword` chúng ta sẽ phân tích kỹ hơn nhé
+Đây là một ví dụ huyền thoại mỗi khi chúng ta học một ngôn ngữ mới đây.
+Và trong một ứng dụng Java thì hàm `main` sẽ luôn chạy đầu tiên. Chúng ta có các `keyword` chúng ta sẽ phân tích kỹ hơn nhé
 
 - `public`: định nghĩa rằng method được phép truy cập ở bất cứ nơi nào.
 - `static`: cho phép gọi method main mà không cần phải khởi tạo đối tượng main.
